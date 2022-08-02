@@ -7,8 +7,8 @@ st.sidebar.markdown("# Page 2 🎉")
 
 df = pd.DataFrame(
     np.random.randn(10, 5),
-    columns=('col %d' % i for i in range(5)))
+    columns=('col %d' % i for i in range(5))
+)
 
 st.table(df)
-
-st.bar_chart(df)
+st.area_chart(df)
