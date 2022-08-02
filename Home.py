@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-st.markdown('<style>body{background-color: Blue;}</style>',unsafe_allow_html=True)
 st.markdown("#การวิเคราะห์และออกแบบสมรรถการเรียนด้าน AI")
 st.markdown("# Ailca System 🎈🎈")
 st.balloons()
