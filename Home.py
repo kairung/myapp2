@@ -3,20 +3,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.markdown("#การวิเคราะห์และออกแบบสมรรถการเรียนด้าน AI")
-st.markdown("# Ailca System 🎈🎈")
+st.title("การวิเคราะห์และออกแบบสมรรถการเรียนด้าน AI")
+st.header("# Ailca System 🎈🎈")
+st.subheader("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+html_temp="""
+<div style="background-color:tomato:padding:15px;">
+<h2>สมรรถนะการเรียนรู้ทาง AI 5 ด้าน</h2>
+</div>
+"""
+st.markdown(html_temp,unsafe_allow_html=True)
 st.balloons()
 st.sidebar.markdown("# 🎉หน้าแรก🎉")
 
-data = dict(
-    character=["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
-    parent=["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
-    value=[10, 14, 12, 10, 2, 6, 6, 4, 4])
-
-fig = plt.sunburst(
-    data,
-    names='character',
-    parents='parent',
-    values='value',
-)
-fig.show()
