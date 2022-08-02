@@ -1,3 +1,3 @@
 import streamlit as st
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("# Page 2 ❄️")
+st.markdown("# การวิเคราะห์รายบุคคล❄️")
+st.sidebar.markdown("# Page 3 ❄️")
