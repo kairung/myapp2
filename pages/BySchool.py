@@ -24,4 +24,13 @@ st.table(df)
 c = alt.Chart(df).mark_circle().encode(
    x='x' , y='y' , size='z', color='z', tooltip=['x', 'y', 'z'])
 
+st.header("รายงานสถิติของข้อมูล")
+st.write(df.describe())
+
+st.header("ตัวอย่างของข้อมูล")
+st.write(df.head(20))
+
+#st.table(df)
+st.header("การจินตทัศน์ข้อมูล")
+
 st.altair_chart(c, use_container_width=True)

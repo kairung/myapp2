@@ -18,5 +18,12 @@ df = pd.DataFrame(
     columns=('col %d' % i for i in range(5))
 )
 
-st.table(df)
+st.header("รายงานสถิติของข้อมูล")
+st.write(df.describe())
+
+st.header("ตัวอย่างของข้อมูล")
+st.write(df.head(20))
+
+#st.table(df)
+st.header("การจินตทัศน์ข้อมูล")
 st.area_chart(df)
