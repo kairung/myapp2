@@ -40,7 +40,8 @@ def radar_chart(val1,val2,val3,val4,val5):
 st.subheader("เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้")
 
 st.markdown("ระดับประถมศึกษา1",unsafe_allow_html=True)
-df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9,'คะแนนรวม':27})
-st.dataframe(df1) 
+df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9,'คะแนนรวม':27},index=(0,1))
+dt1=df1.head(1)
+st.dataframe(dt1) 
 
 radar_chart(6,6,3,3,9)
