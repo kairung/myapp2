@@ -44,3 +44,11 @@ dt1=[6,6,3,3,9,27]
 df1 = pd.DataFrame(dt1,columns=['ด้านที่1','ด้านที่2','ด้านที่3','ด้านที่4','ด้านที่5','คะแนนรวม'])
 st.dataframe(df1) 
 radar_chart(6,6,3,3,9)
+
+htmlcode="""
+<div>
+    <a href="https://plotly.com/~plotly2_demo/407/" target="_blank" title="Global- CO2-emission" style="display: block; text-align: center;"><img src="https://plotly.com/~plotly2_demo/407.png" alt="Global- CO2-emission" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
+    <script data-plotly="plotly2_demo:407" src="https://plotly.com/embed.js" async></script>
+</div>
+"""
+st.markdown(htmlcode,unsafe_allow_html=True)
