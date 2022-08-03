@@ -42,5 +42,5 @@ st.subheader("เกณฑ์การให้คะแนนแต่ละร
 st.markdown("ระดับประถมศึกษา",unsafe_allow_html=True)
 dt1=[6,6,3,3,9,27]
 df1 = pd.DataFrame(dt1,columns=['ด้านที่1','ด้านที่2','ด้านที่3','ด้านที่4','ด้านที่5','คะแนนรวม'])
-st.dataframe(df) 
+st.dataframe(df1) 
 radar_chart(6,6,3,3,9)
