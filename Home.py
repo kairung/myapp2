@@ -37,25 +37,18 @@ def radar_chart(val1,val2,val3,val4,val5):
     st.write(fig)
 
 st.subheader("เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้")
-fig1 = make_subplots(rows=3,cols=2)
-
-#First Subplot
-fig1.add_trace(radar_chart(5,2,7,9,4), row=1, col=1)
-
-# col2 
-fig1.add_trace(radar_chart(5,2,7,9,4), row=1, col=2)
-
-#First Subplot
-fig1.add_trace(radar_chart(5,2,7,9,4), row=2, col=1)
-
-# col2 
-fig1.add_trace(radar_chart(5,2,7,9,4), row=2, col=2)
-
-#First Subplot
-fig1.add_trace(radar_chart(5,2,7,9,4), row=3, col=1)
-
-# col2 
-fig1.add_trace(radar_chart(5,2,7,9,4), row=3, col=2)
-
+fig1 = make_subplots(rows=1,cols=2)
+fig1.add_trace(
+    go.Scatter(
+        x=[1, 2, 3], 
+        y=[4, 5, 6]),
+        row=1, col=1
+    )
+fig1.add_trace(
+    go.Scatter(
+        x=[20, 30, 40], 
+        y=[50, 60, 70]),
+        row=1, col=2
+    )
 st.markdown("ระดับประถมศึกษาปีที่ 1",unsafe_allow_html=True)
 radar_chart(5,2,7,9,4)
