@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
+
 from plotly.subplots import make_subplots
 
 
@@ -12,7 +13,7 @@ from plotly.subplots import make_subplots
 
 html_temp="""
 <div style="background-color:#80ced6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h3>การวิเคราะห์และออกแบบสมรรถการเรียนด้าน AI</h3>
+<h3>การวิเคราะห์และออกแบบสมรรถการเรียนรู้ด้าน AI</h3>
 </div>
 """
 st.markdown(html_temp,unsafe_allow_html=True)
@@ -37,19 +38,15 @@ def radar_chart(val1,val2,val3,val4,val5):
     st.write(fig)
 
 st.subheader("เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้")
-fig1 = make_subplots(rows=1,cols=2)
 
-fig1.add_trace(
-    go.Scatter(
-        x=[1, 2, 3], 
-        y=[4, 5, 6]),
-        row=1, col=1
-    )
-fig1.add_trace(
-    go.Scatter(
-        x=[20, 30, 40], 
-        y=[50, 60, 70]),
-        row=1, col=2
-    )
 st.markdown("ระดับประถมศึกษาปีที่ 1",unsafe_allow_html=True)
 radar_chart(5,2,7,9,4)
+
+from plotly import graph_objs as go
+from plotly.tools import make_subplots
+import plotly.plotly as py
+
+fig = make_subplots(rows=1, cols=2)
+fig.add_trace(go.Scatter(y=[4, 2, 1], mode="lines"), row=1, col=1)
+fig.add_trace(go.Bar(y=[2, 1, 3]), row=1, col=2)
+py.plot(fig)
