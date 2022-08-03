@@ -64,6 +64,7 @@ html_4="""
 </div>
 """
 st.markdown(html_4,unsafe_allow_html=True)
+st.markdown("")
 df2 = pd.DataFrame({'ด้านที่1':3,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':9,'คะแนนรวม':33},index=(0,1))
 dt2=df2.head(1)
 st.dataframe(dt2) 
@@ -76,6 +77,7 @@ html_5="""
 </div>
 """
 st.markdown(html_5,unsafe_allow_html=True)
+st.markdown("")
 df3 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':6,'คะแนนรวม':33},index=(0,1))
 dt3=df3.head(1)
 st.dataframe(dt3) 
@@ -88,6 +90,7 @@ html_6="""
 </div>
 """
 st.markdown(html_6,unsafe_allow_html=True)
+st.markdown("")
 df4 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':12,'ด้านที่3':6,'ด้านที่4':9,'ด้านที่5':6,'คะแนนรวม':42},index=(0,1))
 dt4=df4.head(1)
 st.dataframe(dt4) 
@@ -100,12 +103,19 @@ html_7="""
 </div>
 """
 st.markdown(html_7,unsafe_allow_html=True)
+st.markdown("")
 df5 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':15,'ด้านที่3':9,'ด้านที่4':9,'ด้านที่5':9,'คะแนนรวม':51},index=(0,1))
 dt5=df5.head(1)
 st.dataframe(dt5) 
 
 radar_chart(9,15,9,9,9)
 
-st.markdown("เกณฑ์การให้คะแนน",unsafe_allow_html=True)
+html_8="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>เกณฑ์การให้คะแนน 4</h5></center>
+</div>
+"""
+st.markdown(html_8,unsafe_allow_html=True)
+st.markdown("")
 dx=pd.read_excel('./data/gen.xlsx')
 st.dataframe(dx)

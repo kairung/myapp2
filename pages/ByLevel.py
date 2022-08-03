@@ -18,8 +18,8 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>รายงานสถิติของข้อมูล </h4>
+<div style="background-color:#AFEEEE;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<h5>รายงานสถิติของข้อมูล </h5>
 </div>
 """
 st.markdown(html_22,unsafe_allow_html=True)
@@ -30,8 +30,8 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>ตัวอย่างของข้อมูล </h4>
+<div style="background-color:#AFEEEE;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<h5>ตัวอย่างของข้อมูล </h5>
 </div>
 """
 st.markdown(html_23,unsafe_allow_html=True)
@@ -43,8 +43,8 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>การจินตทัศน์ข้อมูล </h4>
+<div style="background-color:#AFEEEE;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
 st.markdown(html_24,unsafe_allow_html=True)
@@ -83,8 +83,8 @@ options5 = st.multiselect(
 st.write('คุณเลือกดังนี้', options5)
 
 if st.button("ออกแบบ"):
-    html_24="""
-<div style="background-color:green;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+    html_25="""
+<div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
@@ -94,7 +94,7 @@ if st.button("ออกแบบ"):
 </center>
 </div>
 """
-    st.markdown(html_24,unsafe_allow_html=True)
+    st.markdown(html_25,unsafe_allow_html=True)
     st.button("ยังไม่ออกแบบ")
 else:
     st.write("ไม่ออกแบบ")
