@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 html_21="""
-<div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h2>🎉การวิเคราะห์รายชั้นปี 🎉</h2>
+<div style="background-color:#40E0D0;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+ <center><h2>การวิเคราะห์รายชั้นปี</h2></center>
 </div>
 """
 st.markdown(html_21,unsafe_allow_html=True)
@@ -18,7 +18,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉รายงานสถิติของข้อมูล 🎉</h4>
 </div>
 """
@@ -30,7 +30,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉ตัวอย่างของข้อมูล 🎉</h4>
 </div>
 """
@@ -43,7 +43,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉การจินตทัศน์ข้อมูล 🎉</h4>
 </div>
 """
@@ -84,7 +84,7 @@ st.write('คุณเลือกดังนี้', options5)
 
 if st.button("ออกแบบ"):
     html_24="""
-<div style="background-color:#6AD8EE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:green;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
