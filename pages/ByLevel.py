@@ -81,7 +81,6 @@ options5 = st.multiselect(
      ['สูง', 'กลาง', 'ต่ำ'])
 st.write('คุณเลือกดังนี้', options5)
 
-st.button("ออกแบบ")
 if st.button("ออกแบบ"):
     html_24="""
 <div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
