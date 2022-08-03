@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+st.image("./pic/01.png")
 st.title("การวิเคราะห์และออกแบบสมรรถการเรียนด้าน AI")
 st.header("# Ailca System 🎈🎈")
 
