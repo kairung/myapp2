@@ -8,7 +8,8 @@ html_21="""
 </div>
 """
 st.markdown(html_21,unsafe_allow_html=True)
-
+st.markdown("")
+st.markdown("")
 st.sidebar.markdown("# วิเคราะห์รายชั้นปี 🎉")
 
 df = pd.DataFrame(
@@ -17,7 +18,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉รายงานสถิติของข้อมูล 🎉</h4>
 </div>
 """
@@ -29,7 +30,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉ตัวอย่างของข้อมูล 🎉</h4>
 </div>
 """
@@ -42,7 +43,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#93AEF7;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>🎉การจินตทัศน์ข้อมูล 🎉</h4>
 </div>
 """
@@ -83,13 +84,13 @@ st.write('คุณเลือกดังนี้', options5)
 
 if st.button("ออกแบบ"):
     html_24="""
-<div style="background-color:#3366FF;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#6AD8EE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
-        1.ด้านที่ 1 สูง
-        2.ด้านที่ 2 กลาง
-        3.ด้านที่ 3 กลาง
-        4.ด้านที่ 4 สูง
-        5.ด้านที่ 5 สูง
+        1.ด้านที่ 1 สูง <br>
+        2.ด้านที่ 2 กลาง <br>
+        3.ด้านที่ 3 กลาง <br>
+        4.ด้านที่ 4 สูง <br>
+        5.ด้านที่ 5 สูง <br>
 </center>
 </div>
 """
