@@ -37,9 +37,19 @@ def radar_chart(val1,val2,val3,val4,val5):
     fig=px.line_polar(df,r='r',theta='theta',line_close=True)
     st.write(fig)
 
-st.subheader("เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้")
+html_2="""
+<div style="background-color:#40E0D0;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h2>เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้</h2>
+</div>
+"""
+st.markdown(html_2,unsafe_allow_html=True)
 
-st.markdown("ระดับประถมศึกษา1",unsafe_allow_html=True)
+html_3="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h3>ระดับประถมศึกษา 1</h3>
+</div>
+"""
+st.markdown(html_3,unsafe_allow_html=True)
 df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9,'คะแนนรวม':27},index=(0,1))
 dt1=df1.head(1)
 st.dataframe(dt1) 
