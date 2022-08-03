@@ -45,3 +45,35 @@ dt1=df1.head(1)
 st.dataframe(dt1) 
 
 radar_chart(6,6,3,3,9)
+
+st.markdown("ระดับประถมศึกษา 2",unsafe_allow_html=True)
+df2 = pd.DataFrame({'ด้านที่1':3,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':9,'คะแนนรวม':33},index=(0,1))
+dt2=df2.head(1)
+st.dataframe(dt2) 
+
+radar_chart(3,9,6,6,9)
+
+st.markdown("ระดับประถมศึกษา 3",unsafe_allow_html=True)
+df3 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':6,'คะแนนรวม':33},index=(0,1))
+dt3=df3.head(1)
+st.dataframe(dt3) 
+
+radar_chart(6,9,6,6,6)
+
+st.markdown("ระดับประถมศึกษา 4",unsafe_allow_html=True)
+df4 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':12,'ด้านที่3':6,'ด้านที่4':9,'ด้านที่5':6,'คะแนนรวม':42},index=(0,1))
+dt4=df4.head(1)
+st.dataframe(dt4) 
+
+radar_chart(9,12,6,9,6)
+
+st.markdown("ระดับประถมศึกษา 5",unsafe_allow_html=True)
+df5 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':15,'ด้านที่3':9,'ด้านที่4':9,'ด้านที่5':9,'คะแนนรวม':51},index=(0,1))
+dt5=df5.head(1)
+st.dataframe(dt5) 
+
+radar_chart(9,15,9,9,9)
+
+st.markdown("เกณฑ์การให้คะแนน",unsafe_allow_html=True)
+dx=pd.read_excel('./data/gen.xlsx')
+st.dataframe(dx)
