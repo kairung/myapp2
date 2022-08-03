@@ -43,41 +43,63 @@ html_2="""
 </div>
 """
 st.markdown(html_2,unsafe_allow_html=True)
-
+st.markdown("")
+st.markdown("")
 html_3="""
 <div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 1</h5>
 </div>
 """
 st.markdown(html_3,unsafe_allow_html=True)
+st.markdown("")
 df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9,'คะแนนรวม':27},index=(0,1))
 dt1=df1.head(1)
 st.dataframe(dt1) 
 
 radar_chart(6,6,3,3,9)
 
-st.markdown("ระดับประถมศึกษา 2",unsafe_allow_html=True)
+html_4="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h5>ระดับประถมศึกษา 2</h5>
+</div>
+"""
+st.markdown(html_4,unsafe_allow_html=True)
 df2 = pd.DataFrame({'ด้านที่1':3,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':9,'คะแนนรวม':33},index=(0,1))
 dt2=df2.head(1)
 st.dataframe(dt2) 
 
 radar_chart(3,9,6,6,9)
 
-st.markdown("ระดับประถมศึกษา 3",unsafe_allow_html=True)
+html_5="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h5>ระดับประถมศึกษา 3</h5>
+</div>
+"""
+st.markdown(html_5,unsafe_allow_html=True)
 df3 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':9,'ด้านที่3':6,'ด้านที่4':6,'ด้านที่5':6,'คะแนนรวม':33},index=(0,1))
 dt3=df3.head(1)
 st.dataframe(dt3) 
 
 radar_chart(6,9,6,6,6)
 
-st.markdown("ระดับประถมศึกษา 4",unsafe_allow_html=True)
+html_6="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h5>ระดับประถมศึกษา 4</h5>
+</div>
+"""
+st.markdown(html_6,unsafe_allow_html=True)
 df4 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':12,'ด้านที่3':6,'ด้านที่4':9,'ด้านที่5':6,'คะแนนรวม':42},index=(0,1))
 dt4=df4.head(1)
 st.dataframe(dt4) 
 
 radar_chart(9,12,6,9,6)
 
-st.markdown("ระดับประถมศึกษา 5",unsafe_allow_html=True)
+html_7="""
+<div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h5>ระดับประถมศึกษา 5</h5>
+</div>
+"""
+st.markdown(html_7,unsafe_allow_html=True)
 df5 = pd.DataFrame({'ด้านที่1':9,'ด้านที่2':15,'ด้านที่3':9,'ด้านที่4':9,'ด้านที่5':9,'คะแนนรวม':51},index=(0,1))
 dt5=df5.head(1)
 st.dataframe(dt5) 

@@ -4,13 +4,13 @@ import numpy as np
 
 html_21="""
 <div style="background-color:#40E0D0;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
- <center><h2>การวิเคราะห์รายชั้นปี</h2></center>
+ <center><h3>การวิเคราะห์รายชั้นปี</h3></center>
 </div>
 """
 st.markdown(html_21,unsafe_allow_html=True)
 st.markdown("")
 st.markdown("")
-st.sidebar.markdown("# วิเคราะห์รายชั้นปี 🎉")
+st.sidebar.markdown("# วิเคราะห์รายชั้นปี ")
 
 df = pd.DataFrame(
     np.random.randn(10, 5),
@@ -19,7 +19,7 @@ df = pd.DataFrame(
 
 html_22="""
 <div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>🎉รายงานสถิติของข้อมูล 🎉</h4>
+<h4>รายงานสถิติของข้อมูล </h4>
 </div>
 """
 st.markdown(html_22,unsafe_allow_html=True)
@@ -31,7 +31,7 @@ else:
 
 html_23="""
 <div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>🎉ตัวอย่างของข้อมูล 🎉</h4>
+<h4>ตัวอย่างของข้อมูล </h4>
 </div>
 """
 st.markdown(html_23,unsafe_allow_html=True)
@@ -44,7 +44,7 @@ else:
 #st.table(df)
 html_24="""
 <div style="background-color:#AFEEEE;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<h4>🎉การจินตทัศน์ข้อมูล 🎉</h4>
+<h4>การจินตทัศน์ข้อมูล </h4>
 </div>
 """
 st.markdown(html_24,unsafe_allow_html=True)
