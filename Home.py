@@ -38,6 +38,7 @@ def radar_chart(val1,val2,val3,val4,val5):
 
 st.subheader("เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้")
 fig1 = make_subplots(rows=1,cols=2)
+
 fig1.add_trace(
     go.Scatter(
         x=[1, 2, 3], 
