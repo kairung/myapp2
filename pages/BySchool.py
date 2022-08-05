@@ -105,5 +105,6 @@ if st.button("ออกแบบ"):
 """
     st.markdown(html_25,unsafe_allow_html=True)
     st.button("ยังไม่ออกแบบ")
+    st.image('./pic/04.png')
 else:
     st.write("ไม่ออกแบบ")
