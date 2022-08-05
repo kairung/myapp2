@@ -9,7 +9,7 @@ html_21="""
 """
 st.image('./pic/03.png')
 st.markdown(html_21,unsafe_allow_html=True)
-st.markdown("")
+st.markdown("xxxxx")
 st.markdown("")
 st.sidebar.markdown("# วิเคราะห์รายชั้นปี ")
 
