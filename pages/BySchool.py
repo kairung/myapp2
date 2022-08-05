@@ -52,9 +52,6 @@ df = pd.DataFrame(
    np.random.randn(100, 3),
    columns=['x','y','z']
    )
-
-st.table(df)
-
 c = alt.Chart(df).mark_circle().encode(
    x='x' , y='y' , size='z', color='z', tooltip=['x', 'y', 'z'])
 
