@@ -12,7 +12,7 @@ from plotly.subplots import make_subplots
 #st.image("./pic/01.png")
 
 html_temp="""
-<div style="background-color:#E4F3F6;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h4>การวิเคราะห์และออกแบบสมรรถการเรียนรู้ด้าน AI</h4>
 </div>
 """
@@ -39,7 +39,7 @@ def radar_chart(val1,val2,val3,val4,val5):
     st.write(fig)
 
 html_2="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h4>เกณฑ์การให้คะแนนแต่ละระดับวัดได้ดังนี้</h4>
 </div>
 """
