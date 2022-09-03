@@ -47,7 +47,7 @@ st.markdown(html_2,unsafe_allow_html=True)
 st.markdown("")
 st.markdown("")
 html_3="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 1</h5>
 </div>
 """
@@ -60,7 +60,7 @@ st.dataframe(dt1)
 radar_chart(6,6,3,3,9)
 
 html_4="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 2</h5>
 </div>
 """
@@ -73,7 +73,7 @@ st.dataframe(dt2)
 radar_chart(3,9,6,6,9)
 
 html_5="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 3</h5>
 </div>
 """
@@ -86,7 +86,7 @@ st.dataframe(dt3)
 radar_chart(6,9,6,6,6)
 
 html_6="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 4</h5>
 </div>
 """
@@ -99,7 +99,7 @@ st.dataframe(dt4)
 radar_chart(9,12,6,9,6)
 
 html_7="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 5</h5>
 </div>
 """
@@ -112,7 +112,7 @@ st.dataframe(dt5)
 radar_chart(9,15,9,9,9)
 
 html_8="""
-<div style="background-color:#E4F3F6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>เกณฑ์การให้คะแนน 4</h5></center>
 </div>
 """
