@@ -16,7 +16,7 @@ html_temp="""
 <h4>การวิเคราะห์และออกแบบสมรรถการเรียนรู้ด้าน AI</h4>
 </div>
 """
-st.image('./pic/03.png')
+st.image('./pic/ban1.jpg')
 st.markdown(html_temp,unsafe_allow_html=True)
 st.header("----------------------------------------------------------")
 st.subheader("สมรรถนะการเรียนรู้ทาง AI 5 ด้าน ประกอบด้วย")
