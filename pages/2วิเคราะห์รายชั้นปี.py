@@ -7,7 +7,7 @@ html_21="""
  <center><h3>การวิเคราะห์รายชั้นปี</h3></center>
 </div>
 """
-st.image('./pic/03.png')
+st.image('./pic/ban5.png')
 st.markdown(html_21,unsafe_allow_html=True)
 st.markdown("xxxxx")
 st.markdown("")
