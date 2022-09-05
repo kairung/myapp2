@@ -113,7 +113,18 @@ optAi=st.radio('สมรรถนะการเรียนรู้ Ai',['ด
 st.write("คุณเลือกทำนายสมรรถนะการเรียนรู้ Ai :",optAi)
 
 if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"):  
-    st.button("ไม่ออกแบบ")  
     st.write("ผลลัพธ์ทำนายสมรรถนะการเรียนรู้ Ai :",optAi)   
+    Recom=st.button("แนะนำการเรียนรู้รายด้าน",optAi)
+    if Recom=="ด้านที่1":
+        st.write("cc")
+    elif Recom=="ด้านที่2":
+        st.write("cc")
+    elif Recom=="ด้านที่3":
+        st.write("cc")
+    elif Recom=="ด้านที่4":
+        st.write("cc")
+    else:
+        st.write("cc")
+    st.button("Ok")
 else:
     st.write("ไม่ออกแบบ")
