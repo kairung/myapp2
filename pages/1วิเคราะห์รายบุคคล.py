@@ -111,6 +111,8 @@ html_25="""
 st.markdown(html_25,unsafe_allow_html=True)
 optAi=st.radio('สมรรถนะการเรียนรู้ Ai',['ด้านที่1','ด้านที่2','ด้านที่3','ด้านที่4','ด้านที่5'])
 st.write("คุณเลือกทำนายสมรรถนะการเรียนรู้ Ai :",optAi)
+
+st.write(f'{options1} xxx{options2} xxx{options3}')
 #if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
 if options1 !='' or options2!="" or options3 !=""or options4 !="" or options5 !=""or options6 !="" or options7 !=""or options8 !="" or options9 !="" :
     st.write("ผลลัพธ์ทำนายสมรรถนะการเรียนรู้ Ai :",optAi)   
