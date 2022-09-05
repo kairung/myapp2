@@ -4,7 +4,7 @@ import numpy as np
 import altair as alt
 
 html_21="""
-<div style="background-color:#C2D6B4;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#5EAD54;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การวิเคราะห์รายโรงเรียน</h3></center>
 </div>
 """
@@ -20,7 +20,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#C2D6B4;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>รายงานสถิติของข้อมูล </h5>
 </div>
 """
@@ -32,7 +32,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#C2D6B4;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>ตัวอย่างของข้อมูล </h5>
 </div>
 """
@@ -45,7 +45,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#C2D6B4;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
