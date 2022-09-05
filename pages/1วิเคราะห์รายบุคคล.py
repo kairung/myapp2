@@ -113,9 +113,7 @@ optAi=st.radio('สมรรถนะการเรียนรู้ Ai',['ด
 st.write("คุณเลือกทำนายสมรรถนะการเรียนรู้ Ai :",optAi)
 
 if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
-    if options1==""or options2=="" or options3==""or options4=="" or options5==""or options6=="" or options7==""or options8=="" or options9=="" :
-        st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
-    else: 
+    if options1 !='' or options2!="" or options3!=""or options4!="" or options5!=""or options6!="" or options7!=""or options8!="" or options9!="" :
         st.write("ผลลัพธ์ทำนายสมรรถนะการเรียนรู้ Ai :",optAi)   
         Recom=st.button("แนะนำการเรียนรู้รายด้าน",optAi)
         if Recom=="ด้านที่1":
@@ -129,5 +127,7 @@ if st.button("ทำนายสมรรถนะการเรียนรู
         else:
             st.write("cc")
         st.button("Ok")
+    else: 
+        st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
 else:
     st.write("ไม่ออกแบบ")
