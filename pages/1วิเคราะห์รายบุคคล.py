@@ -101,14 +101,11 @@ st.write('คุณเลือกดังนี้', options8)
 
 html_25="""
 <div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h4>🎉กรุณาเลือกสมรรถนะรายด้านที่ต้องการทำนาย 🎉</h4>      
+<center><h4>🎉ผลการทำนายรายด้าน 🎉</h4>      
 </center></div>
 """
 st.markdown(html_25,unsafe_allow_html=True)
-optAi=st.radio('สมรรถนะการเรียนรู้ Ai',['ด้านที่1','ด้านที่2','ด้านที่3','ด้านที่4','ด้านที่5'])
-st.write("คุณเลือกทำนายสมรรถนะการเรียนรู้ Ai :",optAi)
-
-st.write(f'{options1} xxx{options2} xxx{options3}')
+#st.write(f'{options1} xxx{options2} xxx{options3}')
 #if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
 if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !=[]or options6 !=[] or options7 !=[]or options8 !=[] :
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -121,12 +118,12 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
     prediction = loaded_model.predict(input_data_reshaped)
-    print(prediction)
+    st.write(prediction)
     if(prediction[0]==1):
-        print("fail")
+        st.write("fail")
     elif (prediction[0]==2):
-        print("pass")
+        st.write("pass")
     else:
-        print("verygood")
+        st.write("verygood")
 else: 
     st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
