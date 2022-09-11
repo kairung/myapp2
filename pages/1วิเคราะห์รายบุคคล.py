@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import plotly.express as px
 
 html_21="""
 <div style="background-color: #E7CE5B ;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
@@ -13,6 +14,15 @@ st.markdown(html_21,unsafe_allow_html=True)
 st.markdown("")
 st.markdown("")
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
+
+   
+def radar_chart(val1,val2,val3,val4,val5):
+    df=pd.DataFrame(dict(
+        r=[val1,val2,val3,val4,val5],
+        theta=["ด้านที่1","ด้านที่2","ด้านที่3","ด้านที่4","ด้านที่5"]))
+    fig=px.line_polar(df,r='r',theta='theta',line_close=True)
+    st.write(fig)
+
 
 df = pd.DataFrame(
     np.random.randn(10, 5),
@@ -156,6 +166,7 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับผ่าน")
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับดีมาก")
+
     #------- Ai ด้านที่ 4
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
     input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
@@ -188,10 +199,21 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับดีมาก")
 
+    html_3="""
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<h5>ระดับประถมศึกษา 1</h5>
+</div>
+"""
+    st.markdown(html_3,unsafe_allow_html=True)
+    st.markdown("")
+    df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9},index=(0,1))
+    dt1=df1.head(1)
+    st.dataframe(dt1)
+    radar_chart(3,3,3,3,3)
+
 else: 
 
     html_26 ="""
-<div style=""<br> ****** <br> กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้" </div>
+<div style=""<center><br> ****** <br> กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้ </center></div>
 """
     st.markdown(html_26,unsafe_allow_html=True)
-   
