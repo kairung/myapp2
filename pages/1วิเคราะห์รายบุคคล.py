@@ -199,12 +199,12 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับดีมาก")
 
-    html_3="""
+    html_27="""
 <div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <h5>ระดับประถมศึกษา 1</h5>
 </div>
 """
-    st.markdown(html_3,unsafe_allow_html=True)
+    st.markdown(html_27,unsafe_allow_html=True)
     st.markdown("")
     df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9},index=(0,1))
     dt1=df1.head(1)
