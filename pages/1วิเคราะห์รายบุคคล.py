@@ -66,38 +66,38 @@ st.write('คุณเลือกดังนี้', options1)
 
 options2 = st.multiselect(
      'กรุณาเลือกจำนวนพี่น้อง',
-     ['1คน', '2คน', '3คน','อื่นๆ'])
-st.write('คุณเลือกดังนี้', options2)
+     ['1', '2', '3','4'])
+st.write('คุณเลือกดังนี้ [1:1คน, 2:2คน, 3:3คน,4:อื่นๆ]', options2)
 
 options3 = st.multiselect(
      'กรุณาเลือกเป็นบุตรคนที่',
-     ['คนที่1', 'คนที่2', 'คนที่3','อื่นๆ'])
-st.write('คุณเลือกดังนี้', options3)
+     ['1', '2', '3','4'])
+st.write('คุณเลือกดังนี้ [1:1คน, 2:2คน, 3:3คน,4:อื่นๆ]', options3)
 
 options4 = st.multiselect(
      'กรุณาเลือกสถานะบิดามารดา',
-     ['1.อยู่ด้วยกัน', '2.หย่าร้าง', '3.บิดาเสีย','4.มารดาเสีย','5.อื่นๆ'])
-st.write('คุณเลือกดังนี้', options4)
+     ['1', '2', '3','4','5'])
+st.write('คุณเลือกดังนี้ [1:อยู่ด้วยกัน, 2:หย่าร้าง, 3:บิดาเสีย,4:มารดาเสีย,5:อื่นๆ]',options4)
 
 options5 = st.multiselect(
      'กรุณาเลือกระดับการศึกษาบิดา',
-     ['1.ต่ำกว่าป.6', '2.ป.6', '3.ม.3','4.ม.6', '5.ปริญญาตรี', '6.สูงกว่าปริญญาตรี'])
-st.write('คุณเลือกดังนี้', options5)
+     ['1', '2', '3','4','5','6'])
+st.write('คุณเลือกดังนี้ [1:ต่ำกว่าป.6, 2:ป.6, 3:ม.3,4:ม.6, 5:ปริญญาตรี, 6:สูงกว่าปริญญาตรี]', options5)
 
 options6 = st.multiselect(
      'กรุณาเลือกระดับการศึกษามารดา',
-     ['1.ต่ำกว่าป.6', '2.ป.6', '3.ม.3','4.ม.6', '5.ปริญญาตรี', '6.สูงกว่าปริญญาตรี'])
-st.write('คุณเลือกดังนี้', options6)
+     ['1', '2', '3','4','5','6'])
+st.write('คุณเลือกดังนี้ [1:ต่ำกว่าป.6, 2:ป.6, 3:ม.3,4:ม.6, 5:ปริญญาตรี, 6:สูงกว่าปริญญาตรี]', options6)
 
 options7 = st.multiselect(
      'กรุณาเลือกนักเรียนอาศัยอยู่กับ',
-     ['1.พ่อแม่', '2.พ่อ', '3.แม่','4.ญาติ', '5.ผู้ปกครอง', '6.อื่นๆ'])
-st.write('คุณเลือกดังนี้', options7)
+    ['1', '2', '3','4','5','6']) 
+st.write('คุณเลือกดังนี้ [1:พ่อแม่, 2:พ่อ, 3:แม่, 4:ญาติ, 5:ผู้ปกครอง, 6:อื่นๆ]', options7)
 
 options8 = st.multiselect(
      'กรุณาเลือกรายได้ครอบครัว',
-     ['1.ต่ำกว่า 10000', '2.10001-15000', '3.15001-30000','4.30001-50000', '5.มากกว่า 50000'])
-st.write('คุณเลือกดังนี้', options8)
+    ['1', '2', '3','4','5'])  
+st.write('คุณเลือกดังนี้ [1:ต่ำกว่า 10000, 2:10001-15000, 3:15001-30000,4:30001-50000, 5:มากกว่า 50000]', options8)
 
 html_25="""
 <div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
@@ -119,11 +119,11 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("ผลการทำนายด้านที่ 1 ระดับไม่ผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("ผลการทำนายด้านที่ 1 ระดับผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับผ่าน")
     else:
-        st.write("ผลการทำนายด้านที่ 1 ระดับดีมาก")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับดีมาก")
     
     #------- Ai ด้านที่ 2
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -135,11 +135,11 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("ผลการทำนายด้านที่ 2 ระดับไม่ผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("ผลการทำนายด้านที่ 2 ระดับผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับผ่าน")
     else:
-        st.write("ผลการทำนายด้านที่ 2 ระดับดีมาก")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับดีมาก")
 
     #------- Ai ด้านที่ 3
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -151,11 +151,11 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("ผลการทำนายด้านที่ 3 ระดับไม่ผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("ผลการทำนายด้านที่ 3 ระดับผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับผ่าน")
     else:
-        st.write("ผลการทำนายด้านที่ 3 ระดับดีมาก")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับดีมาก")
     #------- Ai ด้านที่ 4
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
     input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
@@ -166,11 +166,11 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("ผลการทำนายด้านที่ 4 ระดับไม่ผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("ผลการทำนายด้านที่ 4 ระดับผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับผ่าน")
     else:
-        st.write("ผลการทำนายด้านที่ 4 ระดับดีมาก")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับดีมาก")
     
     #------- Ai ด้านที่ 5
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -182,11 +182,16 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("ผลการทำนายด้านที่ 5 ระดับไม่ผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("ผลการทำนายด้านที่ 5 ระดับผ่าน")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับผ่าน")
     else:
-        st.write("ผลการทำนายด้านที่ 5 ระดับดีมาก")
+        st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับดีมาก")
 
 else: 
-    st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
+
+    html_26 ="""
+<div style=""<br> ****** <br> กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้" </div>
+"""
+    st.markdown(html_26,unsafe_allow_html=True)
+   
