@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pickle
 
 html_21="""
 <div style="background-color: #E7CE5B ;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
@@ -98,11 +99,6 @@ options8 = st.multiselect(
      ['1.ต่ำกว่า 10000', '2.10001-15000', '3.15001-30000','4.30001-50000', '5.มากกว่า 50000'])
 st.write('คุณเลือกดังนี้', options8)
 
-options9 = st.multiselect(
-     'กรุณาครูผู้สอนจบสาขาวิชา',
-     ['สูง', 'กลาง', 'ต่ำ'])
-st.write('คุณเลือกดังนี้', options9)
-
 html_25="""
 <div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉กรุณาเลือกสมรรถนะรายด้านที่ต้องการทำนาย 🎉</h4>      
@@ -115,18 +111,22 @@ st.write("คุณเลือกทำนายสมรรถนะการ�
 st.write(f'{options1} xxx{options2} xxx{options3}')
 #if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
 if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !=[]or options6 !=[] or options7 !=[]or options8 !=[] or options9 !=[] :
-    st.write("ผลลัพธ์ทำนายสมรรถนะการเรียนรู้ Ai :",optAi)   
-    Recom=st.button("แนะนำการเรียนรู้รายด้าน",optAi)
-    if Recom=="ด้านที่1":
-        st.write("cc")
-    elif Recom=="ด้านที่2":
-        st.write("cc")
-    elif Recom=="ด้านที่3":
-        st.write("cc")
-    elif Recom=="ด้านที่4":
-        st.write("cc")
+    loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
+    input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
+
+    # changing the input_data to numpy array
+    input_data_as_numpy_array = np.asarray(input_data)
+
+    # reshape the array as we are predicting for one instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+    prediction = loaded_model.predict(input_data_reshaped)
+    print(prediction)
+    if(prediction[0]==1):
+        print("fail")
+    elif (prediction[0]==2):
+        print("pass")
     else:
-        st.write("cc")
-    st.button("Ok")
+        print("verygood")
 else: 
     st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
