@@ -108,22 +108,85 @@ st.markdown(html_25,unsafe_allow_html=True)
 #st.write(f'{options1} xxx{options2} xxx{options3}')
 #if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
 if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !=[]or options6 !=[] or options7 !=[]or options8 !=[] :
+    
+    #------- Ai ด้านที่ 1
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
     input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
-
     # changing the input_data to numpy array
     input_data_as_numpy_array = np.asarray(input_data)
-
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
     if(prediction[0]==1):
-        st.write("fail")
+        st.write("ผลการทำนายด้านที่ 1 ระดับไม่ผ่าน")
     elif (prediction[0]==2):
-        st.write("pass")
+        st.write("ผลการทำนายด้านที่ 1 ระดับผ่าน")
     else:
-        st.write("verygood")
+        st.write("ผลการทำนายด้านที่ 1 ระดับดีมาก")
+    
+    #------- Ai ด้านที่ 2
+    loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
+    input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
+    # changing the input_data to numpy array
+    input_data_as_numpy_array = np.asarray(input_data)
+    # reshape the array as we are predicting for one instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    prediction = loaded_model.predict(input_data_reshaped)
+    st.write(prediction)
+    if(prediction[0]==1):
+        st.write("ผลการทำนายด้านที่ 2 ระดับไม่ผ่าน")
+    elif (prediction[0]==2):
+        st.write("ผลการทำนายด้านที่ 2 ระดับผ่าน")
+    else:
+        st.write("ผลการทำนายด้านที่ 2 ระดับดีมาก")
+
+    #------- Ai ด้านที่ 3
+    loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
+    input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
+    # changing the input_data to numpy array
+    input_data_as_numpy_array = np.asarray(input_data)
+    # reshape the array as we are predicting for one instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    prediction = loaded_model.predict(input_data_reshaped)
+    st.write(prediction)
+    if(prediction[0]==1):
+        st.write("ผลการทำนายด้านที่ 3 ระดับไม่ผ่าน")
+    elif (prediction[0]==2):
+        st.write("ผลการทำนายด้านที่ 3 ระดับผ่าน")
+    else:
+        st.write("ผลการทำนายด้านที่ 3 ระดับดีมาก")
+    #------- Ai ด้านที่ 4
+    loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
+    input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
+    # changing the input_data to numpy array
+    input_data_as_numpy_array = np.asarray(input_data)
+    # reshape the array as we are predicting for one instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    prediction = loaded_model.predict(input_data_reshaped)
+    st.write(prediction)
+    if(prediction[0]==1):
+        st.write("ผลการทำนายด้านที่ 4 ระดับไม่ผ่าน")
+    elif (prediction[0]==2):
+        st.write("ผลการทำนายด้านที่ 4 ระดับผ่าน")
+    else:
+        st.write("ผลการทำนายด้านที่ 4 ระดับดีมาก")
+    
+    #------- Ai ด้านที่ 5
+    loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
+    input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
+    # changing the input_data to numpy array
+    input_data_as_numpy_array = np.asarray(input_data)
+    # reshape the array as we are predicting for one instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    prediction = loaded_model.predict(input_data_reshaped)
+    st.write(prediction)
+    if(prediction[0]==1):
+        st.write("ผลการทำนายด้านที่ 5 ระดับไม่ผ่าน")
+    elif (prediction[0]==2):
+        st.write("ผลการทำนายด้านที่ 5 ระดับผ่าน")
+    else:
+        st.write("ผลการทำนายด้านที่ 5 ระดับดีมาก")
+
 else: 
     st.write("กรุณากรอกข้อมูลการวิเคราะห์สรรถนะการเรียนรู้ด้าน AI รายบุคคล 5 ด้าน ให้ครบ<br>จึงจะทำนายได้")
