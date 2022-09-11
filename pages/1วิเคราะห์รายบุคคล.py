@@ -110,7 +110,7 @@ st.write("คุณเลือกทำนายสมรรถนะการ�
 
 st.write(f'{options1} xxx{options2} xxx{options3}')
 #if st.button("ทำนายสมรรถนะการเรียนรู้ AI รายด้าน"): 
-if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !=[]or options6 !=[] or options7 !=[]or options8 !=[] or options9 !=[] :
+if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !=[]or options6 !=[] or options7 !=[]or options8 !=[] :
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
     input_data =  (7,	1,	2,	1,	2,	2,	3,	1	)
 
