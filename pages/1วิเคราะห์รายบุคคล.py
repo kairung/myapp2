@@ -130,10 +130,13 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     st.write(prediction)
     if(prediction[0]==1):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับไม่ผ่าน")
+        ai1='ไม่ผ่าน'
     elif (prediction[0]==2):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับผ่าน")
+        ai1='ผ่าน'
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 1 ระดับดีมาก")
+        ai1='ดีมาก'
     
     #------- Ai ด้านที่ 2
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -146,10 +149,13 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     st.write(prediction)
     if(prediction[0]==1):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับไม่ผ่าน")
+        ai2='ไม่ผ่าน'
     elif (prediction[0]==2):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับผ่าน")
+        ai2='ผ่าน'
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 2 ระดับดีมาก")
+        ai2='ดีมาก'
 
     #------- Ai ด้านที่ 3
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -162,10 +168,13 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     st.write(prediction)
     if(prediction[0]==1):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับไม่ผ่าน")
+        ai3='ไม่ผ่าน'
     elif (prediction[0]==2):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับผ่าน")
+        ai3='ผ่าน'
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 3 ระดับดีมาก")
+        ai3='ดีมาก'
 
     #------- Ai ด้านที่ 4
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -178,10 +187,13 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     st.write(prediction)
     if(prediction[0]==1):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับไม่ผ่าน")
+        ai4='ไม่ผ่าน'
     elif (prediction[0]==2):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับผ่าน")
+        ai4='ไม่ผ่าน'
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 4 ระดับดีมาก")
+        ai4='ดีมาก'
     
     #------- Ai ด้านที่ 5
     loaded_model = pickle.load(open('./data/model/trained_model.sav', 'rb'))
@@ -194,10 +206,13 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
     st.write(prediction)
     if(prediction[0]==1):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับไม่ผ่าน")
+        ai5='ไม่ผ่าน'
     elif (prediction[0]==2):
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับผ่าน")
+        ai5='ผ่าน'
     else:
         st.write("ผลการทำนายสมรรถนะการเรียนรู้ AI รายด้าน ด้านที่ 5 ระดับดีมาก")
+        ai5='ดีมาก'
 
     html_27="""
 <div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
@@ -206,10 +221,10 @@ if options1 !=[] or options2!=[] or options3 !=[] or options4 !=[] or options5 !
 """
     st.markdown(html_27,unsafe_allow_html=True)
     st.markdown("")
-    df1 = pd.DataFrame({'ด้านที่1':6,'ด้านที่2':6,'ด้านที่3':3,'ด้านที่4':3,'ด้านที่5':9},index=(0,1))
+    df1 = pd.DataFrame({'ด้านที่1':ai1,'ด้านที่2':ai2,'ด้านที่3':ai3,'ด้านที่4':ai4,'ด้านที่5':ai5},index=(0,1))
     dt1=df1.head(1)
     st.dataframe(dt1)
-    radar_chart(3,3,3,3,3)
+    radar_chart(prediction[0],prediction[0],prediction[0],prediction[0],prediction[0])
 
 else: 
 
