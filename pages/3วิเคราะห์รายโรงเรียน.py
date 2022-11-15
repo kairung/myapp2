@@ -5,7 +5,7 @@ import altair as alt
 import plotly.express as px
 
 html_21="""
-<div style="background-color:#5EAD54;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#23c8b2;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การวิเคราะห์รายโรงเรียน</h3></center>
 </div>
 """
@@ -29,7 +29,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>รายงานสถิติของข้อมูล </h5>
 </div>
 """
@@ -41,7 +41,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>ตัวอย่างของข้อมูล </h5>
 </div>
 """
@@ -54,7 +54,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#5EAD54;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
@@ -80,7 +80,7 @@ st.write('คุณเลือกดังนี้', options1)
 
 if st.button("วิเคราะห์สมรรถนะ"):
     html_25="""
-<div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#f4b2a6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
@@ -97,11 +97,8 @@ if st.button("วิเคราะห์สมรรถนะ"):
 else:
     st.write("ไม่วิเคราะห์")
 
-
-
-
 html_26="""
-<div style="background-color:#5EAD54;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#23c8b2;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การออกแบบสมรรถนะการเรียนรู้ด้าน AI </h3></center>
 </div>
 """
@@ -117,7 +114,7 @@ st.markdown("ด้านนี้ รร.ของคุณอยู่ใน�
 
 if st.button("ออกแบบ"):
     html_25="""
-<div style="background-color:coral;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#f4b2a6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
