@@ -71,7 +71,7 @@ options4 = st.multiselect(
      ['การเรียนรู้ด้านที่1', 'การเรียนรู้ด้านที่2', 'การเรียนรู้ด้านที่3','การเรียนรู้ด้านที่4', 'การเรียนรู้ด้านที่5'])
 st.write('คุณเลือกดังนี้', options4)
 
-st.write("*",options4,"ของ",options2,"อยู่ในระดับที่ xxx")
+st.write(str(options4),"ของ",str(options2),"อยู่ในระดับที่ xxx")
 
 if st.button("ออกแบบ"):
     if options4==[]:
