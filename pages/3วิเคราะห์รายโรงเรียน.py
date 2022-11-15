@@ -29,7 +29,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#bcefd0;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>รายงานสถิติของข้อมูล </h5>
 </div>
 """
@@ -41,7 +41,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#bcefd0;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>ตัวอย่างของข้อมูล </h5>
 </div>
 """
@@ -54,7 +54,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#23c8b2;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#bcefd0;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
@@ -98,7 +98,7 @@ else:
     st.write("ไม่วิเคราะห์")
 
 html_26="""
-<div style="background-color:#23c8b2;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#bcefd0;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การออกแบบสมรรถนะการเรียนรู้ด้าน AI </h3></center>
 </div>
 """
