@@ -29,29 +29,30 @@ options1 = st.multiselect(
      'กรุณาเลือกขนาดโรงเรียนต้องการวิเคราะห์',
     ['ขนาดใหญ่', 'ขนาดกลาง', 'ขนาดเล็ก', 'รวม'])
 st.write('คุณเลือกดังนี้', options1)
+
 if options1==[]:
     st.markdown("คุณยังไม่ได้เลือกระดับชั้นปีสำหรับการวิเคราะห์ข้อมูล")
 else:
-    st.markdown("คุณเลือก",options1)
+    st.write("คุณเลือก",options1)
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
     st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
 
-    st.button("ไม่วิเคราะห์ข้อมูล")
+st.button("ไม่วิเคราะห์ข้อมูล")
 
 options2 = st.multiselect(
      'กรุณาเลือกระดับชั้นปีที่ต้องการวิเคราะห์',
     ['ป.1', 'ป.2', 'ป.3', 'ป.4', 'ป.5'])
 st.write('คุณเลือกดังนี้', options2)
+
 if options2==[]:
     st.markdown("คุณยังไม่ได้เลือกระดับชั้นปีสำหรับการวิเคราะห์ข้อมูล")
 else:
-    st.markdown("คุณเลือก",options2)
+    st.write("คุณเลือก",options2)
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
     st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
-
-    st.button("ไม่วิเคราะห์ข้อมูล")
+st.button("ไม่วิเคราะห์ข้อมูล")
 
 html_23="""
 <div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
