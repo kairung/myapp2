@@ -19,7 +19,7 @@ df = pd.DataFrame(
 )
 
 html_22="""
-<div style="background-color:#7a0177;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>รายงานสถิติของข้อมูล </h5>
 </div>
 """
@@ -31,7 +31,7 @@ else:
     st.write("ไม่แสดงข้อมูล")
 
 html_23="""
-<div style="background-color:#7a0177;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>ตัวอย่างของข้อมูล </h5>
 </div>
 """
@@ -44,7 +44,7 @@ else:
 
 #st.table(df)
 html_24="""
-<div style="background-color:#7a0177;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
+<div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
 <h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
