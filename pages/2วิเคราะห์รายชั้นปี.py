@@ -32,12 +32,10 @@ st.write('คุณเลือกดังนี้', options1)
 
 if options1==[]:
     st.markdown("คุณยังไม่ได้เลือกระดับชั้นปีสำหรับการวิเคราะห์ข้อมูล")
-else:
-    st.write("คุณเลือก",options1)
+else:  
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
-    st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
-    st.button("ไม่วิเคราะห์ข้อมูล")
+    st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")    
 
 options2 = st.multiselect(
      'กรุณาเลือกระดับชั้นปีที่ต้องการวิเคราะห์',
@@ -47,11 +45,10 @@ st.write('คุณเลือกดังนี้', options2)
 if options2==[]:
     st.markdown("คุณยังไม่ได้เลือกระดับชั้นปีสำหรับการวิเคราะห์ข้อมูล")
 else:
-    st.write("คุณเลือก",options2)
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
     st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
-    st.button("ไม่วิเคราะห์ข้อมูล")
+ 
 
 html_23="""
 <div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
