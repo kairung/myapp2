@@ -9,7 +9,7 @@ html_21="""
 """
 st.image('./pic/ban23.png')
 st.markdown(html_21,unsafe_allow_html=True)
-st.markdown("xxxxx")
+st.markdown("")
 st.markdown("")
 st.sidebar.markdown("# วิเคราะห์รายชั้นปี ")
 
@@ -24,11 +24,23 @@ html_22="""
 </div>
 """
 st.markdown(html_22,unsafe_allow_html=True)
-if st.button("แสดงข้อมูลสถิติ"):
-   st.write(df.describe())
-   st.button("ไม่แสดงข้อมูล")
+if st.button("เลือกข้อมูลโรงเรียนที่ต้องการวิเคราะห์"):
+    st.write(df.describe())
+    options1 = st.multiselect(
+     'กรุณาเลือกระดับชั้นปีที่ต้องการวิเคราะห์',
+    ['ป.1', 'ป.2', 'ป.3', 'ป.4', 'ป.5'])
+    st.write('คุณเลือกดังนี้', options1)
+    if options1==[]:
+        st.markdown("คุณยังไม่ได้เลือกระดับชั้นปีสำหรับการวิเคราะห์ข้อมูล")
+    else:
+        st.markdown("คุณเลือก",options1)
+        st.markdown("ใส่ข้อมูลสถิติ")
+        st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
+        st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
+
+        st.button("ไม่วิเคราะห์ข้อมูล")
 else:
-    st.write("ไม่แสดงข้อมูล")
+    st.write("ไม่วิเคราะห์ข้อมูล")
 
 html_23="""
 <div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
