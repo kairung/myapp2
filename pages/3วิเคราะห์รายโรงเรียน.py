@@ -80,7 +80,10 @@ st.write('คุณเลือกดังนี้', options1)
 
 
 if st.button("วิเคราะห์สมรรถนะ"):
-    html_25="""
+    if options1==[]:
+        st.markdown("คุณยังไม่เลือกข้อมูลโรงเรียนสำหรับการวิเคราะห์สมรรถนะ")
+    else:
+        html_25="""
 <div style="background-color:#c3ecee;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
@@ -91,10 +94,10 @@ if st.button("วิเคราะห์สมรรถนะ"):
 </center>
 </div>
 """
-    st.markdown(html_25,unsafe_allow_html=True)
-    st.markdown("show chart")
-    radar_chart(val1,val2,val3,val4,val5)
-    st.button("ยังไม่วิเคราะห์")    
+        st.markdown(html_25,unsafe_allow_html=True)
+        st.markdown("show chart")
+        radar_chart(val1,val2,val3,val4,val5)
+        st.button("ยังไม่วิเคราะห์")    
 else:
     st.write("ไม่วิเคราะห์")
 
