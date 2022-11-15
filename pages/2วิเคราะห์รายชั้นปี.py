@@ -37,8 +37,7 @@ else:
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
     st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
-
-st.button("ไม่วิเคราะห์ข้อมูล")
+    st.button("ไม่วิเคราะห์ข้อมูล")
 
 options2 = st.multiselect(
      'กรุณาเลือกระดับชั้นปีที่ต้องการวิเคราะห์',
@@ -52,7 +51,7 @@ else:
     st.markdown("ใส่ข้อมูลสถิติ")
     st.markdown("ใส่ข้อมูลตัวอย่างข้อมูล")
     st.markdown("ใส่ข้อมูลการจินตทัศน์ข้อมูล")
-st.button("ไม่วิเคราะห์ข้อมูล")
+    st.button("ไม่วิเคราะห์ข้อมูล")
 
 html_23="""
 <div style="background-color:#f768a1;padding:10px;border-radius:10px 10px 10px 10px;border-style:'solid';border-color:black">
