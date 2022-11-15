@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
+import plotly.express as px
 
 html_21="""
 <div style="background-color:#5EAD54;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
@@ -13,6 +14,14 @@ st.markdown(html_21,unsafe_allow_html=True)
 st.markdown("")
 st.markdown("")
 st.sidebar.markdown("# วิเคราะห์รายโรงเรียน")
+
+def radar_chart(val1,val2,val3,val4,val5):
+    df=pd.DataFrame(dict(
+        r=[val1,val2,val3,val4,val5],
+        theta=["ด้านที่1","ด้านที่2","ด้านที่3","ด้านที่4","ด้านที่5"]))
+    fig=px.line_polar(df,r='r',theta='theta',line_close=True)
+    st.write(fig)
+
 
 df = pd.DataFrame(
     np.random.randn(10, 5),
@@ -49,17 +58,15 @@ html_24="""
 <h5>การจินตทัศน์ข้อมูล </h5>
 </div>
 """
-df = pd.DataFrame(
-   np.random.randn(100, 3),
-   columns=['x','y','z']
-   )
-c = alt.Chart(df).mark_circle().encode(
-   x='x' , y='y' , size='z', color='z', tooltip=['x', 'y', 'z'])
+val1=9
+val2=5
+val3=6
+val4=7
+val5=5
 
 st.markdown(html_24,unsafe_allow_html=True)
-if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.write(df.head(20))
-   st.altair_chart(c, use_container_width=True)
+if st.button("แสดงการจินตทัศน์ภาพรวมข้อมูลโรงเรียน"):
+   radar_chart(val1,val2,val3,val4,val5)
    st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล")
@@ -84,8 +91,9 @@ if st.button("วิเคราะห์สมรรถนะ"):
 </div>
 """
     st.markdown(html_25,unsafe_allow_html=True)
-    st.button("ยังไม่วิเคราะห์")
-    st.image('./pic/04.png')
+    st.markdown("show chart")
+    radar_chart(val1,val2,val3,val4,val5)
+    st.button("ยังไม่วิเคราะห์")    
 else:
     st.write("ไม่วิเคราะห์")
 
@@ -121,6 +129,6 @@ if st.button("ออกแบบ"):
 """
     st.markdown(html_25,unsafe_allow_html=True)
     st.button("ยังไม่ออกแบบ")
-    st.image('./pic/04.png')
+   
 else:
     st.write("ไม่ออกแบบ")
