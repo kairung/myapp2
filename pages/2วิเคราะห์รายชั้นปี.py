@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 html_21="""
-<div style="background-color:#7a0177;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#f768a1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การวิเคราะห์รายชั้นปี</h3></center>
 </div>
 """
@@ -71,14 +71,14 @@ options4 = st.multiselect(
      ['การเรียนรู้ด้านที่1', 'การเรียนรู้ด้านที่2', 'การเรียนรู้ด้านที่3','การเรียนรู้ด้านที่4', 'การเรียนรู้ด้านที่5'])
 st.write('คุณเลือกดังนี้', options4)
 
-st.markdown("ด้านนี้ รร.ของคุณอยู่ในระดับที่ xxx")
+st.markdown("*",options4,"ของ",options2,"อยู่ในระดับที่ xxx")
 
 if st.button("ออกแบบ"):
     if options4==[]:
         st.markdown("คุณยังไม่เลือกข้อมูลการออกแบบ กรุณาเลือกการเรียนรู้ AI ด้านที่ต้องการออกแบบก่อน")
     else:
         html_24="""
-<div style="background-color:#fcc5c0;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#f768d1;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
