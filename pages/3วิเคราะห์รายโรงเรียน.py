@@ -5,7 +5,7 @@ import altair as alt
 import plotly.express as px
 
 html_21="""
-<div style="background-color:#23c8b2;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#a1e8e4;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
  <center><h3>การวิเคราะห์รายโรงเรียน</h3></center>
 </div>
 """
@@ -114,7 +114,7 @@ st.markdown("ด้านนี้ รร.ของคุณอยู่ใน�
 
 if st.button("ออกแบบ"):
     html_25="""
-<div style="background-color:#f4b2a6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#c3ecee;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
