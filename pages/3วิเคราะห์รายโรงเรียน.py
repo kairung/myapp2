@@ -78,9 +78,10 @@ options1 = st.multiselect(
      ['รร.1', 'รร.2', 'รร.3','รร.4', 'รร.5', 'รร.6','รร.7', 'รร.8', 'รร.9','ภาพรวม'])
 st.write('คุณเลือกดังนี้', options1)
 
+
 if st.button("วิเคราะห์สมรรถนะ"):
     html_25="""
-<div style="background-color:#f4b2a6;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#c3ecee;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h4>🎉คุณได้ทำการออกแบบ 🎉</h4>
         1.ด้านที่ 1 สูง <br>
         2.ด้านที่ 2 กลาง <br>
